@@ -50,6 +50,35 @@ void EmporiaVueComponent::update() {
   }
 
   if (sensor_reading.end != 0) {
+    ESP_LOGE(TAG, "sensor_reading.is_unread: %x", sensor_reading.is_unread);
+    ESP_LOGE(TAG, "sensor_reading.checksum: %x", sensor_reading.checksum);
+    ESP_LOGE(TAG, "sensor_reading.unknown: %x", sensor_reading.unknown);
+    ESP_LOGE(TAG, "sensor_reading.sequence_num: %x", sensor_reading.sequence_num);
+    ESP_LOGE(TAG, "sensor_reading.power[0]: %x", sensor_reading.power[0]);
+    ESP_LOGE(TAG, "sensor_reading.power[1]: %x", sensor_reading.power[1]);
+    ESP_LOGE(TAG, "sensor_reading.power[2]: %x", sensor_reading.power[2]);
+    ESP_LOGE(TAG, "sensor_reading.power[3]: %x", sensor_reading.power[3]);
+    ESP_LOGE(TAG, "sensor_reading.power[4]: %x", sensor_reading.power[4]);
+    ESP_LOGE(TAG, "sensor_reading.power[5]: %x", sensor_reading.power[5]);
+    ESP_LOGE(TAG, "sensor_reading.power[6]: %x", sensor_reading.power[6]);
+    ESP_LOGE(TAG, "sensor_reading.power[7]: %x", sensor_reading.power[7]);
+    ESP_LOGE(TAG, "sensor_reading.power[8]: %x", sensor_reading.power[8]);
+    ESP_LOGE(TAG, "sensor_reading.power[9]: %x", sensor_reading.power[9]);
+    ESP_LOGE(TAG, "sensor_reading.power[10]: %x", sensor_reading.power[10]);
+    ESP_LOGE(TAG, "sensor_reading.power[11]: %x", sensor_reading.power[11]);
+    ESP_LOGE(TAG, "sensor_reading.power[12]: %x", sensor_reading.power[12]);
+    ESP_LOGE(TAG, "sensor_reading.power[13]: %x", sensor_reading.power[13]);
+    ESP_LOGE(TAG, "sensor_reading.power[14]: %x", sensor_reading.power[14]);
+    ESP_LOGE(TAG, "sensor_reading.power[15]: %x", sensor_reading.power[15]);
+    ESP_LOGE(TAG, "sensor_reading.power[16]: %x", sensor_reading.power[16]);
+    ESP_LOGE(TAG, "sensor_reading.power[17]: %x", sensor_reading.power[17]);
+    ESP_LOGE(TAG, "sensor_reading.power[18]: %x", sensor_reading.power[18]);
+    ESP_LOGE(TAG, "sensor_reading.voltage[0]: %x", sensor_reading.voltage[0]);
+    ESP_LOGE(TAG, "sensor_reading.voltage[1]: %x", sensor_reading.voltage[1]);
+    ESP_LOGE(TAG, "sensor_reading.voltage[2]: %x", sensor_reading.voltage[2]);
+    ESP_LOGE(TAG, "sensor_reading.frequency: %x", sensor_reading.frequency);
+    ESP_LOGE(TAG, "sensor_reading.degrees[0]: %x", sensor_reading.degrees[0]);
+    ESP_LOGE(TAG, "sensor_reading.degrees[1]: %x", sensor_reading.degrees[1]);
     ESP_LOGE(TAG, "sensor_reading.current[0]: %x", sensor_reading.current[0]);
     ESP_LOGE(TAG, "sensor_reading.current[1]: %x", sensor_reading.current[1]);
     ESP_LOGE(TAG, "sensor_reading.current[2]: %x", sensor_reading.current[2]);
