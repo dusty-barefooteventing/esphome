@@ -50,7 +50,26 @@ void EmporiaVueComponent::update() {
   }
 
   if (sensor_reading.end != 0) {
-    ESP_LOGE(TAG, "Failed to read from sensor due to a malformed reading, should end in null bytes but is %d",
+    ESP_LOGE(TAG, "sensor_reading.current[0]: %x", sensor_reading.current[0]);
+    ESP_LOGE(TAG, "sensor_reading.current[1]: %x", sensor_reading.current[1]);
+    ESP_LOGE(TAG, "sensor_reading.current[2]: %x", sensor_reading.current[2]);
+    ESP_LOGE(TAG, "sensor_reading.current[3]: %x", sensor_reading.current[3]);
+    ESP_LOGE(TAG, "sensor_reading.current[4]: %x", sensor_reading.current[4]);
+    ESP_LOGE(TAG, "sensor_reading.current[5]: %x", sensor_reading.current[5]);
+    ESP_LOGE(TAG, "sensor_reading.current[6]: %x", sensor_reading.current[6]);
+    ESP_LOGE(TAG, "sensor_reading.current[7]: %x", sensor_reading.current[7]);
+    ESP_LOGE(TAG, "sensor_reading.current[8]: %x", sensor_reading.current[8]);
+    ESP_LOGE(TAG, "sensor_reading.current[9]: %x", sensor_reading.current[9]);
+    ESP_LOGE(TAG, "sensor_reading.current[10]: %x", sensor_reading.current[10]);
+    ESP_LOGE(TAG, "sensor_reading.current[11]: %x", sensor_reading.current[11]);
+    ESP_LOGE(TAG, "sensor_reading.current[12]: %x", sensor_reading.current[12]);
+    ESP_LOGE(TAG, "sensor_reading.current[13]: %x", sensor_reading.current[13]);
+    ESP_LOGE(TAG, "sensor_reading.current[14]: %x", sensor_reading.current[14]);
+    ESP_LOGE(TAG, "sensor_reading.current[15]: %x", sensor_reading.current[15]);
+    ESP_LOGE(TAG, "sensor_reading.current[16]: %x", sensor_reading.current[16]);
+    ESP_LOGE(TAG, "sensor_reading.current[17]: %x", sensor_reading.current[17]);
+    ESP_LOGE(TAG, "sensor_reading.current[18]: %x", sensor_reading.current[18]);
+    ESP_LOGE(TAG, "Failed to read from sensor due to a malformed reading, should end in null bytes but is %x",
              sensor_reading.end);
     return;
   }
