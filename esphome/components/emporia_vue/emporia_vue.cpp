@@ -53,7 +53,7 @@ void EmporiaVueComponent::update() {
     ESP_LOGE(TAG, "sensor_reading.is_unread: %x", sensor_reading.is_unread);
     ESP_LOGE(TAG, "sensor_reading.checksum: %x", sensor_reading.checksum);
     ESP_LOGE(TAG, "sensor_reading.unknown: %x", sensor_reading.unknown);
-    ESP_LOGE(TAG, "sensor_reading.sequence_num: %x", sensor_reading.sequence_num);
+    ESP_LOGE(TAG, "sensor_reading.sequence_num: %x", sensor_reading.sequence_num);/*
     ESP_LOGE(TAG, "sensor_reading.power[0]: %x", sensor_reading.power[0]);
     ESP_LOGE(TAG, "sensor_reading.power[1]: %x", sensor_reading.power[1]);
     ESP_LOGE(TAG, "sensor_reading.power[2]: %x", sensor_reading.power[2]);
@@ -72,7 +72,7 @@ void EmporiaVueComponent::update() {
     ESP_LOGE(TAG, "sensor_reading.power[15]: %x", sensor_reading.power[15]);
     ESP_LOGE(TAG, "sensor_reading.power[16]: %x", sensor_reading.power[16]);
     ESP_LOGE(TAG, "sensor_reading.power[17]: %x", sensor_reading.power[17]);
-    ESP_LOGE(TAG, "sensor_reading.power[18]: %x", sensor_reading.power[18]);
+    ESP_LOGE(TAG, "sensor_reading.power[18]: %x", sensor_reading.power[18]);*/
     ESP_LOGE(TAG, "sensor_reading.voltage[0]: %x", sensor_reading.voltage[0]);
     ESP_LOGE(TAG, "sensor_reading.voltage[1]: %x", sensor_reading.voltage[1]);
     ESP_LOGE(TAG, "sensor_reading.voltage[2]: %x", sensor_reading.voltage[2]);
