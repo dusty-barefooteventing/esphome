@@ -49,6 +49,12 @@ void EmporiaVueComponent::update() {
     return;
   }
 
+  if (!sensor_reading.is_unread) {
+    ESP_LOGV(TAG, "Ignoring sensor reading that is marked as read");
+    return;
+  }
+
+
   if (sensor_reading.end != 0) {
     ESP_LOGE(TAG, "sensor_reading.is_unread: %x", sensor_reading.is_unread);
     ESP_LOGE(TAG, "sensor_reading.checksum: %x", sensor_reading.checksum);
@@ -100,11 +106,6 @@ void EmporiaVueComponent::update() {
     ESP_LOGE(TAG, "sensor_reading.current[18]: %x", sensor_reading.current[18]);
     ESP_LOGE(TAG, "Failed to read from sensor due to a malformed reading, should end in null bytes but is %x",
              sensor_reading.end);
-    return;
-  }
-
-  if (!sensor_reading.is_unread) {
-    ESP_LOGV(TAG, "Ignoring sensor reading that is marked as read");
     return;
   }
 
