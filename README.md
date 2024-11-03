@@ -25,6 +25,8 @@ For issues, please go to [the discussion board](https://github.com/emporia-vue-l
 
 # Setting up Emporia Vue 2 with ESPHome
 
+**Got a Vue 3? [You can install ESPHome local control on it as well!](https://digiblur.com/2024/03/14/emporia-vue-gen3-esp32-esphome-home-assistant/)**
+
 ![example of hass setup](https://i.imgur.com/hC26j2M.png)
 
 ## What you need
@@ -138,7 +140,8 @@ i2c:
   sda: 21
   scl: 22
   scan: false
-  frequency: 200kHz  # recommended range is 50-200kHz
+  frequency: 400kHz
+  timeout: 1ms
   id: i2c_a
 
 time:
@@ -369,6 +372,8 @@ It's not too critical to get this right on the first try, because you can update
 
 ## Backing up & flashing the Vue 2
 
+**⚠️⚡ Do not power your Vue by mains when doing this flashing! It will not work & is deadly. Only connect your Vue to the mains with the enclosure closed. ⚡⚠️**
+
 Pry the lever on one of the jumper cables up using a pencil or a needle or some other sharp thing. If your cables don't have a lever, cut one end of the cable & strip it using scissors or a knife.
 ![prying the lever on the jumper cable](https://i.imgur.com/BZJGdKq.jpg)![separated cable](https://i.imgur.com/eOc29M7.jpg)
 You will then need to solder a serial header onto the programming port, so that it looks like this:
@@ -391,7 +396,7 @@ If your TTL adapter has both the DTR and RTS pins exposed, you can let it automa
 
 With your other hand, run the following in the console: `esptool.py -b 921600 read_flash 0 0x800000 flash_contents.bin`. Successful completion of this step is _critical_ in case something goes wrong later. This file is necessary to restore the device to factory function.
 
-If the above command fails, try again using `esptool.py -b 115200 read_flash 0 0x800000 flash_contents.bin`.
+If the above command fails, try again using `esptool.py -b 115200 read_flash 0 0x800000 flash_contents.bin`. If you're using an Apple Silicon (M1, M2, etc) CPU and it stops working after a certain percentage every time, try using a different machine
 
 ### Flashing new software
 
